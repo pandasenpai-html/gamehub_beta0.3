@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="backhome.css">
+    
+</head>
+
+<body>
+    <header>
+        
+        <nav>
+            <table>
+                <tr>
+                    <th colspan="2" style="z-index: 2;">
+                        <div class="title-container">
+                               <div class=""></div> <a href="projetmypage.html" target="_self"><h1 class="page-title">THE GAME CENTRE</h1></a>
+                        </div>
+                </th>
+                </tr>
+
+                <tr>
+                    <td class="page-choise"><a href="upload-games.html" alt="adobe flash games" target="_self"><div class="inline-container"><img src="cloud-computing.png" width="10%" height="10%" class="inline-image"> <h2>games uploaded </h2></td></a></div>
+                    <td class="page-choise"><a href="exclosive.html" alt="gamehub own games" target="_self"><div class="inline-container"><img src="fire.png" width="10%" height="10%" class="inline-image" ><h2>our Exclusive games</h2></td></a></div>
+
+                </tr>
+            </table>
+        </nav>
+        <div class="top-left-button" >
+            <button id="playPauseBtn">
+            <img src="silence.png" alt="Play" id="buttonImage" class="navigate-image">
+          </button>
+        </div>
+          <style >#playPauseBtn {
+              background: transparent; /* Make button background transparent */
+              border: none;
+              }</style>
+        <audio id="audio" src="old-fortnite-song-menu-music-10-mins.mp3"></audio>
+        <script>
+            const playPauseBtn = document.getElementById("playPauseBtn");
+            const audio = document.getElementById("audio");
+            const buttonImage = document.getElementById("buttonImage");
+        
+            playPauseBtn.addEventListener("click", () => {
+              if (audio.paused) {
+                audio.play();
+                buttonImage.src = "audio.png"; // Change to the pause icon
+                buttonImage.alt = "Pause";
+              } else {
+                audio.pause();
+                buttonImage.src = "silence.png"; // Change back to the play icon
+                buttonImage.alt = "Play";
+              }
+            });
+          </script>
+    </header>
+   
+    <div class="stars"></div>
+    <script>
+        const starCount = 250; 
+        const shootingStarCount = 15; 
+        const starsContainer = document.querySelector('.stars');
+
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            starsContainer.appendChild(star);
+        }
+
+        
+        
+    </script>
+
+    
+
+
+</body>
+</html>
