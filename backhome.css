@@ -1,0 +1,673 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #0d1b2a, #1b2631, #2b2d42); 
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; 
+    overflow: hidden;
+
+}
+
+.star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 5s infinite alternate;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shooting-star {
+    position: absolute;
+    background: rgba(255, 215, 0, 1); 
+    border-radius: 50%;
+    width: 8px; 
+    height: 8px; 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); 
+    animation: shootingStar 1s infinite linear;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, -100vh);
+        opacity: 0;
+    }
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+    
+}
+
+.animated-button {
+    
+    background-color: transparent;   
+    mix-blend-mode: multiply;    
+    border: none;  
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 5s ease;
+    z-index: 1;
+    overflow: hidden;
+    height: 15%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.animated-button:hover {
+    
+    transform: scale(1.05);
+}
+
+
+.animated-button::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.animated-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+.d {
+    margin-top: auto;  /* Pushes footer to the bottom */
+}
+
+footer.n {
+    position: fixed; /* Ensures the footer is fixed in the viewport */
+    bottom: 0; /* Aligns the footer to the bottom of the viewport */
+    width: 100%; /* Stretches the footer to full width */
+    background: none; /* Matches the body background */
+    z-index: 0; /* Ensures it appears above most elements */
+    color: rgb(0, 0, 0); /* Adjusts text color for visibility */
+    padding: 0% 0; /* Optional: Adds padding for better spacing */
+    
+}
+
+footer.n h3 {
+    margin: 0;
+    font-size: 1em; /* Adjust size as necessary */
+    text-align: center;
+    border: none;
+
+}
+footer table {
+    width: 100%;
+    margin: 0; /* Remove any margin between the footer content */
+    padding: 0;
+    border-spacing: 0; /* Remove space between cells */
+    border: none;
+    border-spacing: 0; /* Remove space between table cells */
+    z-index: 0;
+}
+
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+   
+}
+
+
+.page-title {
+    padding: 5vh 22vh;
+    font-size: 2em;
+    color: white;
+    background-color: #4CAF50;
+    
+    border-radius: 8px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.page-choise {
+    padding: 2vh 5vh;
+    font-size: 100%;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation transition */
+}
+
+.page-choise:hover {
+    transform: scale(1.1); /* Slightly scales up the button */
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+.inline-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the items in the center */
+}
+
+
+.inline-image {
+    width: 30px; /* Adjust the size of the image */
+    height: 30px; /* Adjust the size of the image */
+    margin-right: 10px; /* Adds space between the image and the heading */
+}
+
+h3 {
+    margin: 0; /* Removes default margin */
+    
+}
+
+
+a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent element */
+}
+
+#bord {
+    width: 600px;
+    height: 540px;
+    background-color: gray;
+
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+.board {
+    width: 450px;
+    height: 75%;
+    background-color: #f3f3f3;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.difficulty-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.top-button {
+    margin-bottom: 10px; 
+}
+
+.difficulty-button:hover {
+    background-color: #45a049;
+
+}
+
+
+
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #0d1b2a, #1b2631, #2b2d42);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    
+}
+
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    z-index: 50;
+}
+
+.progress-column {
+    flex: 1;
+    height: 20px;
+    background-color: #ddd; 
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.progress-correct {
+    background-color: green; 
+}
+
+.progress-hint {
+    background-color: orange; 
+}
+
+.progress-skipped {
+    background-color: red; 
+}
+.game-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    z-index: 1;
+    height: 80%;
+   
+
+}
+.game-containe.expanded {
+    height: 500px; /* New height when expanded */
+  }
+
+.title-bar {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+h2 {
+    color:white;
+    margin: 0;
+    
+}
+.outline-image {
+    width: 80%; 
+    height: 55%;
+    margin-bottom: 20px;
+    border: 3px solid #ddd; 
+    border-radius: 10px;
+}
+
+
+
+.flags-image {
+    width: 100%; 
+    height: 55%;
+    margin-bottom: 20px;
+    border: 3px solid #ddd; 
+    border-radius: 10px;
+}
+
+
+
+
+#guessInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
+.icon-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    margin-inline: 50px;
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.icon-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#hintMessage {
+    margin-top: 10px; 
+    font-size: 24px;  
+    color: rgba(16, 187, 79, 0.795);      
+}
+
+
+
+.submit-button {
+    width: 60px;  
+    height: 60px; 
+    border-radius: 0; 
+    padding: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0; 
+}
+
+
+.submit-button:hover {
+    background-color: #ffffff;
+}
+
+
+
+
+#resultMessage {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#nextButton {
+    width: 70px; 
+    height: 60px; 
+    border-radius: 50%; 
+    border: none; 
+    background-color: hsl(0, 0%, 100%); 
+    cursor: pointer; 
+    display: flex; 
+    position: fixed;
+    bottom: 10%;
+    transition: background-color 0.3s; 
+    
+}
+
+#nextButton:hover {
+    background-color: hsl(0, 0%, 90%); 
+}
+
+
+
+
+
+.social-button {
+    
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    
+    
+    display: inline-block;
+    z-index: 1;
+    
+}
+
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.social-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+.top-left-button {
+    position: absolute; /* Absolute positioning for placement */
+    top: 30px; /* Distance from the top edge */
+    left: 30px; /* Distance from the left edge */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.navigate-image {
+    width: 175px; /* Width of the square button */
+    height: 175px; /* Height matches width for a square */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navigate-image:hover {
+    transform: scale(1.1) ; /* Slightly enlarges and rotates */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+}
+
+
+
+
+.top-right-button {
+    position: absolute; /* Absolute positioning for placement */
+    top: 30px; /* Distance from the top edge */
+    right:  30px; /* Distance from the left edge */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.navigate-image {
+    width: 175px; /* Width of the square button */
+    height: 175px; /* Height matches width for a square */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navigate-image:hover {
+    transform: scale(1.1) ; /* Slightly enlarges and rotates */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+}
+
+
+
+.bottom-left-button {
+    position: absolute; /* Absolute positioning for placement */
+    bottom: 80px; /* Distance from the top edge */
+    left:  30px; /* Distance from the left edge */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.navigate-image {
+    width: 125px; /* Width of the square button */
+    height: 125px; /* Height matches width for a square */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navigate-image:hover {
+    transform: scale(1.1) ; /* Slightly enlarges and rotates */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+}
+
+
+
+.bottom-right-button {
+    position: absolute; /* Absolute positioning for placement */
+    bottom: 80px; /* Distance from the top edge */
+    right:  30px; /* Distance from the left edge */
+    z-index: 10; /* Ensure it appears above other elements */
+    background-color: none;
+}
+
+.navigate-image {
+    width: 125px; /* Width of the square button */
+    height: 125px; /* Height matches width for a square */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navigate-image:hover {
+    transform: scale(1.1) ; /* Slightly enlarges and rotates */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+}
+
+
+
+body {
+    overflow: auto; /* Enables scrolling if content overflows */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+
+.game-grid {
+    
+    gap: 15px; /* Space between items */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the grid */
+    justify-items: center;
+}
+
+.game-item {
+   
+    border-radius: 20%;
+    
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 10%;
+    height: 20%;
+}
+
+.game-item img {
+    width: 80%;
+    height: 60%;
+    border-radius: 8px;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for very small screens */
+    }
+}
+
+
+.iploadbountom {
+    position: absolute; /* Absolute positioning for placement */
+    top: 30px; /* Distance from the top edge */
+    right:  7.5%; /* Distance from the left edge */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.upload {
+    width: 100; /* Width of the square button */
+    height: 100px; /* Height matches width for a square */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.upload:hover {
+    transform: scale(1.1) ; /* Slightly enlarges and rotates */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+}
+
+

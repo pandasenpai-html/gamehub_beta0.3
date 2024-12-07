@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Country Outline</title>
+    <link rel="stylesheet" href="backhome.css">
+</head>
+<body>
+
+   
+    <div class="stars"></div>
+    <script>
+        const starCount = 250; 
+        const shootingStarCount = 15; 
+        const starsContainer = document.querySelector('.stars');
+
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            starsContainer.appendChild(star);
+        }
+
+        
+        
+        
+    </script>
+
+<div class="bottom-left-button">
+    <a href="projecthome.html" title="Go to the home screen">
+        <img src="human.png" alt="Go Back to the home screen" class="navigate-image">
+    </a>
+</div> 
+<div class="bottom-right-button">
+    <button id="playPauseBtn">
+    <img src="silence.png" alt="Play" id="buttonImage" class="navigate-image">
+  </button>
+</div>
+  <style >#playPauseBtn {
+      background: transparent; /* Make button background transparent */
+      border: none;
+      }</style>
+
+  <audio id="audio" src="httpswwwyoutubecomwatchv4xluyemgwdc.mp3"></audio>
+
+  <script>
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audio = document.getElementById("audio");
+    const buttonImage = document.getElementById("buttonImage");
+
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        buttonImage.src = "audio.png"; // Change to the pause icon
+        buttonImage.alt = "Pause";
+      } else {
+        audio.pause();
+        buttonImage.src = "silence.png"; // Change back to the play icon
+        buttonImage.alt = "Play";
+      }
+    });
+  </script>
+  
+
+
+    <div class="top-right-button">
+        <a href="borderguessergame.html" title="change the difficulty or rest the game if you like">
+            <img src="exchange.png" alt="change the difficulty or rest the game" class="navigate-image">
+        </a>
+    </div>
+    <div class="top-left-button">
+        <a href="projetmypage.html" title="Go to the game centre">
+            <img src="home.png" alt="Go Back to the game centre" class="navigate-image">
+        </a>
+    </div>
+     <div class="progress-bar">
+        <div class="progress-column" id="column1"></div>
+        <div class="progress-column" id="column2"></div>
+        <div class="progress-column" id="column3"></div>
+        <div class="progress-column" id="column4"></div>
+        <div class="progress-column" id="column5"></div>
+        <div class="progress-column" id="column6"></div>
+        <div class="progress-column" id="column7"></div>
+        <div class="progress-column" id="column8"></div>
+        <div class="progress-column" id="column9"></div>
+    </div>
+    
+    <div class="game-container">
+        <div class="title-bar">
+            <h1>Outlines Guesser</h1>
+        </div>
+        <div id="timer" style="font-size: 24px; color: green;">20</div>
+        <img id="countryImage" src="outline-map-of-france-BYB90M.jpg" alt="Country outline to guess" class="outline-image">
+        
+        <input type="text" id="guessInput" placeholder="Enter country name...">
+        
+        
+        <button class="icon-button" onclick="hintAction()">
+            <img src="bouton-dinformation.png" alt="Hint Icon" title="click here to take a hint" class="icon-image">
+        </button>
+        
+        <button class="submit-button" onclick="checkGuess()">
+            <img src="send (1).png" alt="Submit Icon" title="click here to submit your answer" class="icon-image">
+        </button>
+        
+        <button class="icon-button" onclick="skipCountry()">
+            <img src="fast-forward.png" alt="Skip Icon" title="click here to skip this country" class="icon-image">
+        </button>
+
+        <p id="resultMessage"></p>
+        <p id="hintMessage" ></p>
+        
+        
+        <button id="nextButton" style="display: none;" onclick="nextCountry()">
+            <img src="right.png" alt="Next Country Icon" style="width: 100%; height: 100%;">
+        </button>
+        
+
+    </div>
+    
+    
+
+    
+        <script src="my page.js"></script>
+
+        <footer class="d" >
+            <table>
+                <tr>
+                    
+                    <td style="text-align: left;">                 
+             <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="facebook (1).png" alt="Facebook" class="social-icon"></a>
+             <a href="https://www.instagram.com" target="_blank" title="Instagram" class="social-button"><img src="instagram.png" alt="Instagram" class="social-icon"></a>
+             <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="tiktok.png" alt="Facebook" class="social-icon"></a>
+             <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="whatsapp.png" alt="Facebook" class="social-icon"></a>
+             <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="telegram.png" alt="Facebook" class="social-icon"></a>                  
+                     </td>
+                    
+                    <td>
+                        
+                             <h3 style="white-space: nowrap; ">&copy; 2024 GAMEHUB.ALL RIGHTS RESERVED. </h3>
+                        
+                    </td>
+                </tr>
+                
+            </table>
+            
+            
+            
+             </footer> 
+
+        
+</body>
+</html>

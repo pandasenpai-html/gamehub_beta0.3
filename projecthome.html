@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Background</title>
+    <link rel="stylesheet" href="backhome.css">
+</head>
+<body>
+
+    
+
+ <div class="stars">
+    <script>
+        const starCount = 250; 
+        const shootingStarCount = 15; 
+        const starsContainer = document.querySelector('.stars');
+
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            starsContainer.appendChild(star);
+        }
+
+        
+        for (let i = 0; i < shootingStarCount; i++) {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            shootingStar.style.top = `${Math.random() * 100}vh`;
+            shootingStar.style.left = `${Math.random() * 100}vw`;
+            shootingStar.style.animationDuration = `${Math.random() * 1 + 0.5}s`; 
+            starsContainer.appendChild(shootingStar);
+        }
+    </script>
+ </div>
+
+
+
+
+    
+   
+    
+    
+    <div class="container">
+        <a href="projetmypage.html" target="_self" title="click me to take to the games centre"><button class="animated-button" ><img src="44386.png"></button></a> 
+     </div>
+ 
+     <footer class="d" >
+        <table>
+            <tr>
+                
+                <td style="text-align: left;">                 
+         <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="facebook (1).png" alt="Facebook" class="social-icon"></a>
+         <a href="https://www.instagram.com" target="_blank" title="Instagram" class="social-button"><img src="instagram.png" alt="Instagram" class="social-icon"></a>
+         <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="tiktok.png" alt="Facebook" class="social-icon"></a>
+         <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="whatsapp.png" alt="Facebook" class="social-icon"></a>
+         <a href="https://www.facebook.com" target="_blank" title="Facebook" class="social-button"><img src="telegram.png" alt="Facebook" class="social-icon"></a>                  
+                 </td>
+                
+                <td>
+                    
+                         <h3 style="white-space: nowrap; ">&copy; 2024 GAMEHUB.ALL RIGHTS RESERVED. </h3>
+                    
+                </td>
+            </tr>
+            
+        </table>
+        
+        
+        
+         </footer> 
+        
+        
+        
+
+    
+    
+
+</body>
+
+</html>
